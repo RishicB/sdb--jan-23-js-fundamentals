@@ -1,0 +1,28 @@
+// Hello Frenemy
+
+// Output sanitization and upper casing
+function sanitizeOutput(value) {
+    return value.charAt(0).toUpperCase() + value.slice(1).toLowerCase()
+}
+
+function greeter(name) {
+    // Your solution goes here
+    
+    // Input sanitization
+    name = name.toLowerCase()
+    
+    if (name == "darth vader") {
+        console.log("Nooo, that's impossible!")
+    } else if (name == "lex luthor") {
+        console.log("Be gone!")
+    } else if (name == "luke skywalker") {
+        console.log(`Hello, ${sanitizeOutput(name)}`)
+    } else {
+        console.log(`Sorry, ${sanitizeOutput(name)}. No one here matches.`)
+    }
+}
+
+greeter("DARTH VADER")
+greeter("lex luthor")
+greeter("luke skywalker")
+greeter("paul NIEMCZYK")
